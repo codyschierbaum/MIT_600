@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+"""
+Created on 10.6.17
+Author: Cody Schierbaum
+"""
+
+print("hello world")

@@ -1,0 +1,30 @@
+Declarative info: statement of fact
+Imperative info: how to
+
+Syntax: is the string legal
+Static semantics: does the string have meaning
+Semantics: the assigned meaning of a legal syntax string
+Scalar types
+  Int: Normal integer
+  Float: Real number with decimal places
+  Bool: Boolean true false
+  Nonetype: Has no type
+
+Operators
+  -,+ Addition and subtraction
+  *,/ Multiplication and division
+  // Division to the whole number (leaves off the remainder)
+  ** exponential
+  % returns the remainder
+
+Basic Structure
+[Object][Operator][Object]
+
+Tests
+  > greater than
+  >= greater than or equal to
+  < less than
+  <= less than or equal to
+  == equal
+  != not equal
+  
