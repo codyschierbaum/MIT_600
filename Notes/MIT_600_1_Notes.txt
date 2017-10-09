@@ -18,7 +18,7 @@ Operators
   % returns the remainder
 
 Basic Structure
-[Object][Operator][Object]
+  [Object][Operator][Object]
 
 Tests
   > greater than
@@ -27,4 +27,27 @@ Tests
   <= less than or equal to
   == equal
   != not equal
-  
+
+Variables (bindings)
+  Names that can have values associated with them
+  "Name"="value or expression"
+  x=2
+  x=x*x
+  Names should be descriptive
+  Some key words can't be used as a name (int, float ...)
+  Values can be updated by re-assigning
+
+Strings
+  Sequence of characters
+  Contained within double or single quotes
+  Strings are non-scalar (pieces can be extracted from them)
+  Elements start counting at 0
+  Elements called using []
+    Use [number:number] to call a range
+      [number:] calls everything after element number
+      [:number] calls everything before element number
+    Use [:] to call a copy of a string
+      Name=cody
+      Name[0]: "c"
+      Name[1:3]: "od"
+      Name[:]="cody"
