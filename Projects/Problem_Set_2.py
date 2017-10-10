@@ -14,9 +14,10 @@ bob_test=""
 char_count =0
 for letter in s :
     char_count+=1
-while char_count-2>=0:
-    bob_test=s[char_count-3]+s[char_count-2]+s[char_count-1]
+step=0
+while step<char_count-2:
+    bob_test=s[step]+s[step+1]+s[step+2]
     if bob_test=="bob":
         bob_count+=1
-    char_count-=1
+    step+=1
 print(bob_count)
