@@ -57,6 +57,11 @@ Output
   A comma will seperate each arugment with a space
   use + to concatenate within operation
 
+
+http://www.clevcode.org/cicada-3301/
+https://www.youtube.com/watch?v=svJF_FoSI9o
+
+
 Input
   Prints a string as a prompt, takes user input and assigns to bound variable
   Doesn't need quotes to work, will store string with quotes if typed

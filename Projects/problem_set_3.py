@@ -33,12 +33,17 @@ for letter in range (s_length):
                  test_str_2=test_str_1
                  test_str_1=""
                  test_str_1= test_str_1 + letter_value[test]
-                 len_1=0
+                 len_1=1
              else:
-                 len_1=0
-                 test_val=0
+                 len_1=1
+                 test_val=test
                  test_str_1=""
+                 test_str_1= test_str_1 + letter_value[test]
+                 
 if test_str_2 !="":
-    print(test_str_2)
+    if len_2>=len_1:
+        print(test_str_2)
+    else:
+         print(test_str_1)
 else:
     print(test_str_1)
