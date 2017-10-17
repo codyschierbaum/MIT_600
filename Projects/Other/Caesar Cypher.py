@@ -9,7 +9,7 @@ Created on Tue Oct 10 19:32:11 2017
 """
 
 EorD = str(input("Encrypt or Decrypt:"))
-alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'[]\:;',>./`1234567890-|="
+alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'[]\:;',>./`1234567890-|= "
 dout=""
 if EorD == "decrypt":
     #Decryption

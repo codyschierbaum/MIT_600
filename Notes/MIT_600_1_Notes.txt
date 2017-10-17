@@ -1,3 +1,5 @@
+WEEK 1
+
 Declarative info: statement of fact
 Imperative info: how to
 
@@ -128,3 +130,6 @@ Possible Errors
     Stops
   Forgot to change variable
     Infinite loop!!!
+
+
+WEEK 2
