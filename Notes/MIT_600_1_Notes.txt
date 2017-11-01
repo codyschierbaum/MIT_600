@@ -107,7 +107,7 @@ Range()
 Break
     stops execution of a loop
 
-Itteration
+Iteration
   Still starts with a test  but loops code until test is false
   Repeat a sequence of steps based on a decision
   Allows for guess and check
@@ -173,7 +173,6 @@ Decomposition
   Modules should be self contained and reusable
     Helps structure
 
-
 Abstraction
   Black box concept
     Done neet to know how it works to use it
@@ -211,3 +210,26 @@ Functions
     Aontains assumptions and guarantees
     Assumptions are conditions that must be met
     Guarantees are condtions that will happen if the assumptions are met
+
+Recursion
+  Design solutions by breaking it into reusable chunks; Divide and conquer
+    Where a function calls itself
+    Goal is not infinite recursion
+    Must have 1 or more base cases that can be easily solved
+    Solve the problem with some other input to simplify a larger problem
+    Reduce the problem to a simple case that can be solved directly
+  Examples
+    Iterative multiplication
+      Multiplication is the same as addition multiple times
+      A*B = A+A+A+A... B times
+        while B>0
+          result+=a
+          b-=1
+        return result
+    Recursive multiplication
+      Base case: if b=1 then a*b =a
+      Def mult(a,b)
+        If B==1
+          return A
+        else
+          return a+ mult(a,b-1)
