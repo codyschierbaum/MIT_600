@@ -233,3 +233,31 @@ Recursion
           return A
         else
           return a+ mult(a,b-1)
+
+Inductive Reasoning
+  How do you know a recursive code will work
+  To prove a statement that is indexed on integers is true for all values of n
+    You only need to prove the statement true on the smallest value n
+    Then prove it is true for an arbitrary n and it can be shown to be true for n+1
+    Can be used to prove recusive function
+    Example
+      0+1+2...+n=(n(n+1))/2
+        Smallest Value
+          n=0
+          (0(0+1))/2
+          0*1/2
+          0=0
+        Arbitrary
+          n=(k+1)
+          0+1+2...+k+(k+1)=((k+1)(k+2))/2
+      Towers of Hanoi
+        Think of the move if you have one ring
+          Can move anywhere
+        Think of move for 2 rings
+          move smaller one to spare, larger one to dest, smaller to dest
+        Each move is moving the stack above the largest ring to a spare tower, then to the destination
+          This can be written simply using recursion
+            If you only have one ring, then move it to the destination
+            Otherwise move every ring above the one you want to move to a spare tower
+            Move the one you want to move to the destination
+            Move the rest of the stack back to the destination
