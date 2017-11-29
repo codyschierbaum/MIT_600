@@ -233,6 +233,13 @@ Recursion
           return A
         else
           return a+ mult(a,b-1)
+  Non Numeric Recursion
+    Recursion can be used on strings as well
+    Can function better than itteration
+    Palandrome checker
+      String length 0 or 1 is a palandrome
+      If the first letter = the last letter, check the next two in
+
 
 Inductive Reasoning
   How do you know a recursive code will work
