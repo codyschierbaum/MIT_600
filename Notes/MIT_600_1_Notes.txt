@@ -1,270 +1,330 @@
+Links
+  https://docs.python.org/3/tutorial/index.html
+  http://www.clevcode.org/cicada-3301/
+  https://www.youtube.com/watch?v=svJF_FoSI9o
+
 WEEK 1
 
-Types of Info
-  Declarative info: statement of fact
-  Imperative info: how to
+  Types of Info
+    Declarative info: statement of fact
+    Imperative info: how to
 
-Definitions
-  Syntax: is the string legal
-  Static semantics: does the string have meaning
-  Semantics: the assigned meaning of a legal syntax string
+  Definitions
+    Syntax: is the string legal
+    Static semantics: does the string have meaning
+    Semantics: the assigned meaning of a legal syntax string
 
-Scalar types
-  Int: Normal integer
-  Float: Real number with decimal places
-  Bool: Boolean true false
-  Nonetype: Has no type
+  Scalar types
+    Int: Normal integer
+    Float: Real number with decimal places
+    Bool: Boolean true false
+    Nonetype: Has no type
 
-Basic Structure
-  [Object][Operator][Object]
+  Basic Structure
+    [Object][Operator][Object]
 
-Operators
-  -,+ Addition and subtraction
-  *,/ Multiplication and division
-  // Division to the whole number (leaves off the remainder)
-  ** exponential
-  % returns the remainder
+  Operators
+    -,+ Addition and subtraction
+    *,/ Multiplication and division
+    // Division to the whole number (leaves off the remainder)
+    ** exponential
+    % returns the remainder
 
-Tests
-  > greater than
-  >= greater than or equal to
-  < less than
-  <= less than or equal to
-  == equal
-  != not equal
+  Tests
+    > greater than
+    >= greater than or equal to
+    < less than
+    <= less than or equal to
+    == equal
+    != not equal
 
-Variables (bindings)
-  Names that can have values associated with them
-    "Name" = "value or expression"
-      x=2
-      x=x*x
-  Names should be descriptive
-  Some key words can't be used as a name (int, float ...)
-  Values can be updated by re-assigning
+  Variables (bindings)
+    Names that can have values associated with them
+      "Name" = "value or expression"
+        x=2
+        x=x*x
+    Names should be descriptive
+    Some key words can't be used as a name (int, float ...)
+    Values can be updated by re-assigning
 
-Strings
-  Sequence of CASE SENSETIVE characters
-  Contained within double or single quotes
-  Strings are non-scalar (pieces can be extracted from them)
-  Can be Indexed and sliced
-    Elements start counting at 0
-    Indexed using []
-    Sliced using [::]
-        [number:] calls everything after element number
-        [:number] calls everything before element number
-        [:] calls a copy of a string
-          Name=cody
-          Name[0]: "c"
-          Name[1:3]: "od"
-          Name[:]="cody"
-  Strings are imumutable
-    Can not be changed without being redefined
+  Strings
+    Sequence of CASE SENSETIVE characters
+    Contained within double or single quotes
+    Strings are non-scalar (pieces can be extracted from them)
+    Can be Indexed and sliced
+      Elements start counting at 0
+      Indexed using []
+      Sliced using [::]
+          [number:] calls everything after element number
+          [:number] calls everything before element number
+          [:] calls a copy of a string
+            Name=cody
+            Name[0]: "c"
+            Name[1:3]: "od"
+            Name[:]="cody"
+    Strings are imumutable
+      Can not be changed without being redefined
 
-Output
-  Print: outputs a value to the screen
-  A comma will seperate each arugment with a space
-  use + to concatenate within operation
+  Output
+    Print: outputs a value to the screen
+    A comma will seperate each arugment with a space
+    use + to concatenate within operation
 
-Input
-  Prints a string as a prompt, takes user input and assigns to bound variable
-  Doesn't need quotes to work, will store string with quotes if typed
-  Must cast as int or float if using numeric input
+  Input
+    Prints a string as a prompt, takes user input and assigns to bound variable
+    Doesn't need quotes to work, will store string with quotes if typed
+    Must cast as int or float if using numeric input
 
-Branching Programs
-  Used to make choices
-  Runs code once
-  Test a condition, run one block of code if test is true and another if test is false
-    If condition :
-      code
-    elif 2nd condition :
-      code
-    else: code
+  Branching Programs
+    Used to make choices
+    Runs code once
+    Test a condition, run one block of code if test is true and another if test is false
+      If condition :
+        code
+      elif 2nd condition :
+        code
+      else: code
 
-While Loop
-  Repeat code until condition is false
-  Unknown number of itterations
-  Can use counter but must initialize and incriment within loop
-  Might not be able to rewrite as a for loop
-  While  condition :
-    Code to run while true
-  Have a variable outside of loop
-  Have something that changes variable inside loop
-    Otherwise it's an infinite loop
+  While Loop
+    Repeat code until condition is false
+    Unknown number of itterations
+    Can use counter but must initialize and incriment within loop
+    Might not be able to rewrite as a for loop
+    While  condition :
+      Code to run while true
+    Have a variable outside of loop
+    Have something that changes variable inside loop
+      Otherwise it's an infinite loop
 
-For Loop
-  Easier to capture itterations
-  Known number of itterations
-  Uses a counter, doesn't need initialized or incrimented
-  Can rewrite as while loop
-  for variable in expression:
-    Code
+  For Loop
+    Easier to capture itterations
+    Known number of itterations
+    Uses a counter, doesn't need initialized or incrimented
+    Can rewrite as while loop
+    for variable in expression:
+      Code
 
-Range()
-  incriments to a number
-  (Start,Stop,Incriment)
-  Default is (0,number,1)
+  Range()
+    incriments to a number
+    (Start,Stop,Incriment)
+    Default is (0,number,1)
+    If increment is negative, order is reversed
 
-Break
-    stops execution of a loop
+  Break
+      stops execution of a loop
 
-Iteration
-  Still starts with a test  but loops code until test is false
-  Repeat a sequence of steps based on a decision
-  Allows for guess and check
+  Iteration
+    Still starts with a test  but loops code until test is false
+    Repeat a sequence of steps based on a decision
+    Allows for guess and check
 
-Guess and Check
-  Also called itterative algorithms
-  Use loops to generate and check guesses until a solution is found
-  Three types
-    Exhaustive
-      Check every possible guess
-    Bisectonal
-      Reduce search area by half each guess
-    Newton-Raphson
-      Use a derivitive function to generate the next guess
+  Guess and Check
+    Also called itterative algorithms
+    Use loops to generate and check guesses until a solution is found
+    Three types
+      Exhaustive
+        Check every possible guess
+      Bisectonal
+        Reduce search area by half each guess
+      Newton-Raphson
+        Use a derivitive function to generate the next guess
 
-Using a loop variable
-  Initialized outside loop
-  Used to check for completion
+  Using a loop variable
+    Initialized outside loop
+    Used to check for completion
 
-Decrementing Function
-  Maps program variables to intigers
-  Starts at a non-negative value and decreases each time loop runs
-  Loop ends when variable <=0
+  Decrementing Function
+    Maps program variables to intigers
+    Starts at a non-negative value and decreases each time loop runs
+    Loop ends when variable <=0
 
-Possible Errors
-  Forgot to initialize
-    Using a variable inside a loop that doesn't exist outside of it
-    NameError
-    Stops
-  Forgot to change variable
-    Infinite loop!!!
-
-http://www.clevcode.org/cicada-3301/
-https://www.youtube.com/watch?v=svJF_FoSI9o
+  Possible Errors
+    Forgot to initialize
+      Using a variable inside a loop that doesn't exist outside of it
+      NameError
+      Stops
+    Forgot to change variable
+      Infinite loop!!!
 
 WEEK 2
 
-Aproximate Solutions
-  Incriment a guess so that you get an answer that is close to the solution
-  Steps need to be small enough to be accurate but large enough to not lock up the computer
-  Need to define what "close enough" is
-  Smaller incriments mean slower program
-  Larger "close enough"(epsilon) means less accurate
+  Aproximate Solutions
+    Incriment a guess so that you get an answer that is close to the solution
+    Steps need to be small enough to be accurate but large enough to not lock up the computer
+    Need to define what "close enough" is
+    Smaller incriments mean slower program
+    Larger "close enough"(epsilon) means less accurate
 
-Bisection Search
-  Check if the guess is between 1 and input
-  Keep cutting in half, checking if smaller or larger
-  Continues to return smaller and smaller pieces to check until acceptable aproximation is found
+  Bisection Search
+    Check if the guess is between 1 and input
+    Keep cutting in half, checking if smaller or larger
+    Continues to return smaller and smaller pieces to check until acceptable aproximation is found
 
-Floating Point Numbers
-  Floats approximate real numbers
-  Numbers are stored in binary
-  Can not store infinite digits
+  Floating Point Numbers
+    Floats approximate real numbers
+    Numbers are stored in binary
+    Can not store infinite digits
 
-Newton-Raphson
-  P(x) is some polynomial
-  find r such that p(r)=0
-  g-p(g)/p'(g)
+  Newton-Raphson
+    P(x) is some polynomial
+    find r such that p(r)=0
+    g-p(g)/p'(g)
 
-Decomposition
-  Smaller pieces working together in sync to achieve a goal
-  Breaking a problem into smaller self contained pieces
-  Modules should be self contained and reusable
-    Helps structure
+  Decomposition
+    Smaller pieces working together in sync to achieve a goal
+    Breaking a problem into smaller self contained pieces
+    Modules should be self contained and reusable
+      Helps structure
 
-Abstraction
-  Black box concept
-    Done neet to know how it works to use it
-  Once its built, dont need to know whats inside it, as long as you know how it works
-  Suppress the details
-  Achieved with function spec or doc string
+  Abstraction
+    Black box concept
+      Done neet to know how it works to use it
+    Once its built, dont need to know whats inside it, as long as you know how it works
+    Suppress the details
+    Achieved with function spec or doc string
 
-Functions
-  chunks of code that are not run until called or invoked
-  Functions parts
-    names- used to refer to it, set by def
-    parameters- arguments used inside function, can be 0, contained in ()
-    docstring- tells what the function does
-    body- sequence of commands to execute
-  Structure
-    def name (parameters):
-      """
-      docstring (what's the input and output)
-      """
-      Code
-  Only has meaning INSIDE a function
-  Functions have their own scope but can use global variables as inputs
-    Can not modify global variables, only access
-  Functions need returns
-    Only one return will be executed but a function can have multiple returns
-    Returns take a value
-    Returns stop the computation and give it back to where it was called
-  Invocations can use parameter names to bind, but don't need them
-    If binding is included in the function def, you can create a default
-      Def printname(first, last, reverse=false) would default reverse to false
-      You would have to call the function with a different binding to change it
-      printname(cody, schierbaum, reverse=true)
-  Specifications are like contracts
-    In the docstring
-    Aontains assumptions and guarantees
-    Assumptions are conditions that must be met
-    Guarantees are condtions that will happen if the assumptions are met
+  Functions
+    chunks of code that are not run until called or invoked
+    Functions parts
+      names- used to refer to it, set by def
+      parameters- arguments used inside function, can be 0, contained in ()
+      docstring- tells what the function does
+      body- sequence of commands to execute
+    Structure
+      def name (parameters):
+        """
+        docstring (what's the input and output)
+        """
+        Code
+    Only has meaning INSIDE a function
+    Functions have their own scope but can use global variables as inputs
+      Can not modify global variables, only access
+    Functions need returns
+      Only one return will be executed but a function can have multiple returns
+      Returns take a value
+      Returns stop the computation and give it back to where it was called
+    Invocations can use parameter names to bind, but don't need them
+      If binding is included in the function def, you can create a default
+        Def printname(first, last, reverse=false) would default reverse to false
+        You would have to call the function with a different binding to change it
+        printname(cody, schierbaum, reverse=true)
+    Specifications are like contracts
+      In the docstring
+      Aontains assumptions and guarantees
+      Assumptions are conditions that must be met
+      Guarantees are condtions that will happen if the assumptions are met
 
-Recursion
-  Design solutions by breaking it into reusable chunks; Divide and conquer
-    Where a function calls itself
-    Goal is not infinite recursion
-    Must have 1 or more base cases that can be easily solved
-    Solve the problem with some other input to simplify a larger problem
-    Reduce the problem to a simple case that can be solved directly
-  Examples
-    Iterative multiplication
-      Multiplication is the same as addition multiple times
-      A*B = A+A+A+A... B times
-        while B>0
-          result+=a
-          b-=1
-        return result
-    Recursive multiplication
-      Base case: if b=1 then a*b =a
-      Def mult(a,b)
-        If B==1
-          return A
-        else
-          return a+ mult(a,b-1)
-  Non Numeric Recursion
-    Recursion can be used on strings as well
-    Can function better than itteration
-    Palandrome checker
-      String length 0 or 1 is a palandrome
-      If the first letter = the last letter, check the next two in
+  Recursion
+    Design solutions by breaking it into reusable chunks; Divide and conquer
+      Where a function calls itself
+      Goal is not infinite recursion
+      Must have 1 or more base cases that can be easily solved
+      Solve the problem with some other input to simplify a larger problem
+      Reduce the problem to a simple case that can be solved directly
+    Examples
+      Iterative multiplication
+        Multiplication is the same as addition multiple times
+        A*B = A+A+A+A... B times
+          while B>0
+            result+=a
+            b-=1
+          return result
+      Recursive multiplication
+        Base case: if b=1 then a*b =a
+        Def mult(a,b)
+          If B==1
+            return A
+          else
+            return a+ mult(a,b-1)
+    Non Numeric Recursion
+      Recursion can be used on strings as well
+      Can function better than itteration
+      Palandrome checker
+        String length 0 or 1 is a palandrome
+        If the first letter = the last letter, check the next two in
 
+  Inductive Reasoning
+    How do you know a recursive code will work
+    To prove a statement that is indexed on integers is true for all values of n
+      You only need to prove the statement true on the smallest value n
+      Then prove it is true for an arbitrary n and it can be shown to be true for n+1
+      Can be used to prove recusive function
+      Example
+        0+1+2...+n=(n(n+1))/2
+          Smallest Value
+            n=0
+            (0(0+1))/2
+            0*1/2
+            0=0
+          Arbitrary
+            n=(k+1)
+            0+1+2...+k+(k+1)=((k+1)(k+2))/2
+        Towers of Hanoi
+          Think of the move if you have one ring
+            Can move anywhere
+          Think of move for 2 rings
+            move smaller one to spare, larger one to dest, smaller to dest
+          Each move is moving the stack above the largest ring to a spare tower, then to the destination
+            This can be written simply using recursion
+              If you only have one ring, then move it to the destination
+              Otherwise move every ring above the one you want to move to a spare tower
+              Move the one you want to move to the destination
+              Move the rest of the stack back to the destination
 
-Inductive Reasoning
-  How do you know a recursive code will work
-  To prove a statement that is indexed on integers is true for all values of n
-    You only need to prove the statement true on the smallest value n
-    Then prove it is true for an arbitrary n and it can be shown to be true for n+1
-    Can be used to prove recusive function
-    Example
-      0+1+2...+n=(n(n+1))/2
-        Smallest Value
-          n=0
-          (0(0+1))/2
-          0*1/2
-          0=0
-        Arbitrary
-          n=(k+1)
-          0+1+2...+k+(k+1)=((k+1)(k+2))/2
-      Towers of Hanoi
-        Think of the move if you have one ring
-          Can move anywhere
-        Think of move for 2 rings
-          move smaller one to spare, larger one to dest, smaller to dest
-        Each move is moving the stack above the largest ring to a spare tower, then to the destination
-          This can be written simply using recursion
-            If you only have one ring, then move it to the destination
-            Otherwise move every ring above the one you want to move to a spare tower
-            Move the one you want to move to the destination
-            Move the rest of the stack back to the destination
+  Files
+    Code is stored in modules (.py files)
+    Modules are collections of deffinitions and statements
+    Modules can be imported and called into other modules
+      Import a module with: Import module_name
+      Use imported modules with: module_name.deffinition
+    If no coliding deffinitions are present, modules can be used in another way
+      Import with: from module_name import * (*=everything)
+      Call using normal names (no need for module_name.definition)
+      Adds bindings in the current scope for everything defined in the imported module
+      Statements are only executed the first time a module is imported
+    Files can be handled within python with file handles
+      open(name,command)
+      allows opening, writing and reading, and closing other files
+
+Week 3
+
+Tuples
+  A type of data structure
+  An ordered sequence of Elements
+  Can include any different kind of element
+  Tuples are imutable (element values can't be changed)
+  Tuples are represented by parentheses
+    te=() is an empty tuple
+    t=(1,"one",3)
+  Tuples can be indexed with []
+  Tuples can be concatenated with +
+  Tuples can help swap variables
+    Usually need a temporary variable
+    Tuples can swap using (x,y)=(y,x)
+      Create the tuple for x and y by taking the oposite versions in the tuple
+  Return multiple values from a function
+  Tuples are itterable
+    They can be walked through
+
+Lists
+  Very simmilar to tuples
+  Denoted with []
+  Usually homogenous
+  Lists are mutable
+    .append(value) or .extend(values) adds to the end of the list
+    del(list[element]) deletes element
+    .pop() returns the last element and removes it
+    .remove() removes a specified element
+      if there are multiples it removes the first
+  Lists can convert to and from strings
+    using list(string) returns the string with all characters seperated
+    split() seperates strings on spaces (if left blank) or at the specified character
+    ' '.join(list) converts a string to a list with no seperating character
+      seperating characters can be specified in the ' '
+  Lists can be sorted
+    can be sorted and returned in a new list or can sort and mutate(overwrite) existing list
+    sorted(list) returns a sorted version
+    .sort() mutates and sorts in the list
+    .reverse() mutates and reverses the list
+
+  
