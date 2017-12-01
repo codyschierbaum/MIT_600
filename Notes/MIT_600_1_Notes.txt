@@ -327,4 +327,23 @@ Lists
     .sort() mutates and sorts in the list
     .reverse() mutates and reverses the list
 
-  
+Aliasing
+    Lists are objects that are refered to by variables
+      L=[1,2,3]
+      The list is actually just [1,2,3]
+      L is the variable that refers to the object
+    List variables are aliases
+      Setting L=M would bind the same list object to both variables
+      Any variable pointing to the same object will be altered by changes made to the list
+    Just because two lists print the same does not mean they are the same structure
+      This can be tested by mutating one list and comparing them
+        L=[1,2,3]
+        M=[1,2,3]
+        Changing L would not effect M in this case
+    Lists can be coppied to new lists to avoid having 2 lists pointing to the same object
+      Copy every element in a list with [:]
+        M=L[:]
+        M is now a copy of L, not the same structure
+        Changing M will not change L
+    Copies can also be made by sorting
+      Sort will mutate the list
