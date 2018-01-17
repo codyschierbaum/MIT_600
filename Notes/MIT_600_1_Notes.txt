@@ -169,8 +169,7 @@ WEEK 2
     P(x) is some polynomial
     find r such that p(r)=0
     g-p(g)/p'(g)
-
-  Decomposition
+n  Decomposition
     Smaller pieces working together in sync to achieve a goal
     Breaking a problem into smaller self contained pieces
     Modules should be self contained and reusable
@@ -287,7 +286,7 @@ WEEK 2
       allows opening, writing and reading, and closing other files
 
 Week 3
-
+  See Lecture 6, slides 12,13 for reference to common operations and properties
 Tuples
   A type of data structure
   An ordered sequence of Elements
@@ -328,7 +327,7 @@ Lists
     .reverse() mutates and reverses the list
 
 Aliasing
-    Lists are objects that are refered to by variables
+    Lists are objects that are referred to by variables
       L=[1,2,3]
       The list is actually just [1,2,3]
       L is the variable that refers to the object
@@ -339,11 +338,65 @@ Aliasing
       This can be tested by mutating one list and comparing them
         L=[1,2,3]
         M=[1,2,3]
-        Changing L would not effect M in this case
-    Lists can be coppied to new lists to avoid having 2 lists pointing to the same object
+        Changing L would not effect M in this case because they are different structures
+    Lists can be copied to new lists to avoid having 2 lists pointing to the same object
       Copy every element in a list with [:]
         M=L[:]
         M is now a copy of L, not the same structure
         Changing M will not change L
     Copies can also be made by sorting
-      Sort will mutate the list
+      Sort will mutate the list but not return anything
+      Sorted will not mutate a list, just sorts and returns Elements
+    Lists can also be a list of Lists
+      Binding a variable to a list like L=[M] will return [[elements of m]]
+        L is a list with one element, the list M
+        L can have multiple lists appended to it and it will return each list as a single element
+        Changing one element of a sub list will change the element in the parent list
+    Lists can be printed with concatenation as well
+    Removing Duplicates
+      Write a function that copies a list, iterates over the original list and removes any Duplicates
+        def remove_dups(L1,L2
+        L1_copy=L1[:]
+        for e in L1_copy:
+          if e in L2:
+            L1.remove(e)
+
+Functions as objects
+   Functions are first class objects
+    have Types
+    can be elements of data structures like Lists
+    can appear in expressions
+      as part of an assignment
+      as an argument to another function
+    This is useful when using functions as arguments coupled with Lists
+      this is called higher order programing
+      can be used to apply a function to each element of a list
+    higher order procedure
+      there is a general purpose version of this called Map
+        runs a function against a list of suitable arguments
+          map(abs,[1,-2,3,-4])
+          when printed iteratively, it would show 1,2,3,4
+        Can also be run against multiple lists when the function requires multiple arguments
+
+Dictionaries
+  a data structure indexed by a custom label paired with data
+  Use curly braces to represent a dictionary
+    {key:element,key:element...}
+    order is not important
+  Operations
+    dictionary[key] will return corresponding value
+    entries are added with dictionary[new key]=element
+    key in dictionary tests if the key is in the dictionary
+    del(dictionary[key]) deletes the entry
+    dictionary entered alone will return key:element
+    dicitonary.keys() will return just the keys
+    dictionary.values() returns just the Values
+  Keys and values
+    Values can be anything, any type and can be duplicates.
+    Values can also be lists and other Dictionaries
+    Keys must be unique and of an immutable type
+    be careful with float type as a key
+    there is no order to keys or Values
+    can have multiple types of keys and values in one dictionary
+  Example
+    see song lyrics example
