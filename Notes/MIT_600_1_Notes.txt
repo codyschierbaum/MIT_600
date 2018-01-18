@@ -1,4 +1,4 @@
-intermittentLinks
+Links
   https://docs.python.org/3/tutorial/index.html
   http://www.clevcode.org/cicada-3301/
   https://www.youtube.com/watch?v=svJF_FoSI9o
@@ -169,7 +169,8 @@ WEEK 2
     P(x) is some polynomial
     find r such that p(r)=0
     g-p(g)/p'(g)
-n  Decomposition
+
+  Decomposition
     Smaller pieces working together in sync to achieve a goal
     Breaking a problem into smaller self contained pieces
     Modules should be self contained and reusable
@@ -514,4 +515,39 @@ Bugs and Debugging
       comment the bug
       test the changes
       compare them
-  
+Exceptions
+  what happens when the procedure hits an unexpected condition
+  Types of exceptions
+    Index Error
+    Type Error
+      Operand with incorrect type
+    Name Error
+      Local or global name not defined
+    Syntax Error
+      Python Can't parse the program
+    Attribute Error
+      Attribute reference fails
+    Value Error
+      operand type is ok but the value is not
+    IO Error
+      IO system reports a failure
+        File not fout
+  Don't use a fail silently exception handling
+  Should return an error or stop execution
+  Exception handling
+    Any exception in a try statemen is handled by the except clause
+    Exceptions can be called out by specific error
+      Except typeerror: handles a type error
+      multiples can be used
+    else can be used with try to run something when the try completes correctly
+    finnaly is always executed after any other clauses
+    Example:
+      try:
+        Code
+      except:
+        exception handler
+      else:
+        Run if try works
+      finnaly:
+        ALWAYs run
+      Continue from here
