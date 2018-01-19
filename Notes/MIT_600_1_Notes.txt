@@ -551,3 +551,22 @@ Exceptions
       finnaly:
         ALWAYs run
       Continue from here
+  Exceptions can be used as control flows
+    Instead of returning special values when an error happens then checking for the error value
+    write code to raise an exception when a non expected result is generated
+    instead of writing code that runs when a criteria isn't met
+    write code that runs based on the value generated
+    raise <exception name>(arguments)
+Assertions
+  raises an assertion error if an assumption on the state of the computation is not met
+  Good defensive programing
+  assert condition, return if not met
+  helps ensure legal inputs
+  stops immediately instead of continuing into code
+  assertions help to spot bugs as soon as introduced
+    help stop bad user input
+    ude them to check types, data structures, constraints on returned values and violations of constraints
+
+
+
+    
