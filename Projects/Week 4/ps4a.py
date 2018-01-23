@@ -148,14 +148,10 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    newHand={}
-    for letter in hand:
-        if letter in word:
-            print(letter)
-            newHand[letter]=hand.get(letter,0)- 1
-            print(hand[letter],newHand)
-        else:
-            newHand[letter] = hand.get(letter, 0)
+    newHand=hand.copy()
+    for letter in word:
+        if letter in newHand:
+            newHand[letter]-=1
     return newHand
 #
 # Problem #3: Test word validity
@@ -171,8 +167,19 @@ def isValidWord(word, hand, wordList):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    # TO DO ... <-- Remove this comment when you code this function
+    Pass=True
+    if not word == "":
+        if word in wordList:
+            for letter in word:
+                if not letter in hand:
+                    Pass=False
+                    break
+        else:
+            Pass =False
 
+    else:
+        Pass = False
+    return Pass
 
 #
 # Problem #4: Playing a hand
