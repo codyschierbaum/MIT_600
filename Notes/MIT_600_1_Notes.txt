@@ -403,170 +403,242 @@ Week 3
       see song lyrics example
 
 WEEK 4
-Defensive programing
-  Help eliminate bugs before they happen by:
-    Writing specifications for Functions
-      What does it want and what will it give in return
-    Modularize Programs
-      Break a program into obvious pieces
-    check conditions on inputs and outputs
-    Document your thinking when designing
-Testing/Validation
-  Comparing inputs and outputs
-      Write a list of example ins and the expected outs
-      Also, figure out how can you break the program
-  Debugging
-    Study the events leading to an error
-    Ask why is it not working and how can I fix it
-  When to test
-    ensure the code runs (removes syntax and most static semantic errors)
-    Generate a list of expected results
-      have a set of inputs and the expected outputs
-  Classes of Tests
-    Unit testing
-      test each piece functions separately
-    regression testing
-      add tests for bugs as you find them
-      this catches reintroduced errors that have been previously fixed
-    integration testing
-      testing the whole program
-      Don't rush to this phase
-  Testing Approaches
-    intuition testing
-      use your intuition about where a natural place to test would be
-    random testing
-      test random places
-    black box testing
-      explore all paths through the specifications of the code
-      code is not looked at, only the specification
-      testing can be reused if implementation changes
-      test all paths through the specifications, consider boundaries
-    Glass box testing
-      Looking at the code to design test cases
-      test all branches
-      code is path complete if every path is tested at least once
-      can go through many arpitrary loops
-      could miss paths
-      Look for branches
-      test loops both by going through them multiple times, one time and skipping them
-      Still need to test boundary cases
-Bugs and Debugging
-  Bugs
-    Once you find bugs in the code
-      Isolate them
-      eradicate them
-      retest
-    Types of bugs
-      Overt
-        obvious indication of something wrong
-          infinite loop or crash
-        Good defensive programing can help ensure bugs fall in this category
-      Covert bugs
-        no obvious manifestation
-          returns a wrong value
-      persistent
-        happens every time
-        Good defensive programing can help ensure bugs fall in this category
-      intermittent
-        occur only some times, even with same inputs
-  Debugging
-    Steep learning curve
-    Some builtin tools
-      editors will show some errors
-        index error
-          access something that is outside the limits of a list
-        type error
-          trying to convert/use an inappropriate type
-          mixing data types without appropriate conversion
-        Name error
-          referencing a non existent variable
-        syntax error
-          forgetting parentheses, quotes etc.
-    check python tutor
-    use print statements throughout to isolate what may be going wrong
-      print parameters when you enter a function
-      print results
-      print parameters
-      use the bisection method
-        print half way through the code to narrow where the bug is
-    be systematic in the search for bugs
-    Logic Errors
-      think before writing
-      draw pictures/take a break
-      explain the code
-        to someone else
-        to a rubber ducky
-    Steps
-      Study the code
-        ask how you got the reult, why its wrong and is it part of a family
-      use the scientific method
-        study data
-        form hypothesis
-        pick test cases
-        test
-        repeat
-    Dos/Donts
-      Write a module at a time
-      test and debug it
-      write a function
-      test and debug it
-      do integration testing
-      back up code before changing
-      comment the bug
-      test the changes
-      compare them
-Exceptions
-  what happens when the procedure hits an unexpected condition
-  Types of exceptions
-    Index Error
-    Type Error
-      Operand with incorrect type
-    Name Error
-      Local or global name not defined
-    Syntax Error
-      Python Can't parse the program
-    Attribute Error
-      Attribute reference fails
-    Value Error
-      operand type is ok but the value is not
-    IO Error
-      IO system reports a failure
-        File not fout
-  Don't use a fail silently exception handling
-  Should return an error or stop execution
-  Exception handling
-    Any exception in a try statemen is handled by the except clause
-    Exceptions can be called out by specific error
-      Except typeerror: handles a type error
-      multiples can be used
-    else can be used with try to run something when the try completes correctly
-    finnaly is always executed after any other clauses
-    Example:
-      try:
-        Code
-      except:
-        exception handler
-      else:
-        Run if try works
-      finnaly:
-        ALWAYs run
-      Continue from here
-  Exceptions can be used as control flows
-    Instead of returning special values when an error happens then checking for the error value
-    write code to raise an exception when a non expected result is generated
-    instead of writing code that runs when a criteria isn't met
-    write code that runs based on the value generated
-    raise <exception name>(arguments)
-Assertions
-  raises an assertion error if an assumption on the state of the computation is not met
-  Good defensive programing
-  assert condition, return if not met
-  helps ensure legal inputs
-  stops immediately instead of continuing into code
-  assertions help to spot bugs as soon as introduced
-    help stop bad user input
-    ude them to check types, data structures, constraints on returned values and violations of constraints
+  Defensive programing
+    Help eliminate bugs before they happen by:
+      Writing specifications for Functions
+        What does it want and what will it give in return
+      Modularize Programs
+        Break a program into obvious pieces
+      check conditions on inputs and outputs
+      Document your thinking when designing
+  Testing/Validation
+    Comparing inputs and outputs
+        Write a list of example ins and the expected outs
+        Also, figure out how can you break the program
+    Debugging
+      Study the events leading to an error
+      Ask why is it not working and how can I fix it
+    When to test
+      ensure the code runs (removes syntax and most static semantic errors)
+      Generate a list of expected results
+        have a set of inputs and the expected outputs
+    Classes of Tests
+      Unit testing
+        test each piece functions separately
+      regression testing
+        add tests for bugs as you find them
+        this catches reintroduced errors that have been previously fixed
+      integration testing
+        testing the whole program
+        Don't rush to this phase
+    Testing Approaches
+      intuition testing
+        use your intuition about where a natural place to test would be
+      random testing
+        test random places
+      black box testing
+        explore all paths through the specifications of the code
+        code is not looked at, only the specification
+        testing can be reused if implementation changes
+        test all paths through the specifications, consider boundaries
+      Glass box testing
+        Looking at the code to design test cases
+        test all branches
+        code is path complete if every path is tested at least once
+        can go through many arpitrary loops
+        could miss paths
+        Look for branches
+        test loops both by going through them multiple times, one time and skipping them
+        Still need to test boundary cases
+  Bugs and Debugging
+    Bugs
+      Once you find bugs in the code
+        Isolate them
+        eradicate them
+        retest
+      Types of bugs
+        Overt
+          obvious indication of something wrong
+            infinite loop or crash
+          Good defensive programing can help ensure bugs fall in this category
+        Covert bugs
+          no obvious manifestation
+            returns a wrong value
+        persistent
+          happens every time
+          Good defensive programing can help ensure bugs fall in this category
+        intermittent
+          occur only some times, even with same inputs
+    Debugging
+      Steep learning curve
+      Some builtin tools
+        editors will show some errors
+          index error
+            access something that is outside the limits of a list
+          type error
+            trying to convert/use an inappropriate type
+            mixing data types without appropriate conversion
+          Name error
+            referencing a non existent variable
+          syntax error
+            forgetting parentheses, quotes etc.
+      check python tutor
+      use print statements throughout to isolate what may be going wrong
+        print parameters when you enter a function
+        print results
+        print parameters
+        use the bisection method
+          print half way through the code to narrow where the bug is
+      be systematic in the search for bugs
+      Logic Errors
+        think before writing
+        draw pictures/take a break
+        explain the code
+          to someone else
+          to a rubber ducky
+      Steps
+        Study the code
+          ask how you got the reult, why its wrong and is it part of a family
+        use the scientific method
+          study data
+          form hypothesis
+          pick test cases
+          test
+          repeat
+      Dos/Donts
+        Write a module at a time
+        test and debug it
+        write a function
+        test and debug it
+        do integration testing
+        back up code before changing
+        comment the bug
+        test the changes
+        compare them
+  Exceptions
+    what happens when the procedure hits an unexpected condition
+    Types of exceptions
+      Index Error
+      Type Error
+        Operand with incorrect type
+      Name Error
+        Local or global name not defined
+      Syntax Error
+        Python Can't parse the program
+      Attribute Error
+        Attribute reference fails
+      Value Error
+        operand type is ok but the value is not
+      IO Error
+        IO system reports a failure
+          File not fout
+    Don't use a fail silently exception handling
+    Should return an error or stop execution
+    Exception handling
+      Any exception in a try statemen is handled by the except clause
+      Exceptions can be called out by specific error
+        Except typeerror: handles a type error
+        multiples can be used
+      else can be used with try to run something when the try completes correctly
+      finnaly is always executed after any other clauses
+      Example:
+        try:
+          Code
+        except:
+          exception handler
+        else:
+          Run if try works
+        finnaly:
+          ALWAYs run
+        Continue from here
+    Exceptions can be used as control flows
+      Instead of returning special values when an error happens then checking for the error value
+      write code to raise an exception when a non expected result is generated
+      instead of writing code that runs when a criteria isn't met
+      write code that runs based on the value generated
+      raise <exception name>(arguments)
+  Assertions
+    raises an assertion error if an assumption on the state of the computation is not met
+    Good defensive programing
+    assert condition, return if not met
+    helps ensure legal inputs
+    stops immediately instead of continuing into code
+    assertions help to spot bugs as soon as introduced
+      help stop bad user input
+      ude them to check types, data structures, constraints on returned values and violations of constraints
 
-
-
+Week 5
+Objects
+  Everything in python is an object and has a type
+    objects are a data abstraction
+      each has an internal representation
+      each has an interface for interacting through methods
+        defines behavior but hides the implementation
+      allows for creation of multiple instances
+      allows for destruction of objects
+        using del to forget them
+        letting system garbage collect them
+  Every object has 3 things
+    Type
+    an internal data representation
+    a set of procedures for interaction
+  objects are any data
+    integers,strings,lists,dictionaries etc.
+  every instance is an object
+Data objects
+  lists, tuples, strings
+  once you know how they work, create your own
+  use created as if internal
+  example
+    lists could be represented in memory by a series of consecutive slots
+    usually, a pair of slots
+      the first containing the object
+      the second is a pointer to the next index
+      [(object1,pointer to object2),(object2,pointer to object3)...]
+      allows for arbitrary sizing
+  Lists have an associated sed of methods
+  internal representation should be private (manipulating this could compromise behavior)
+Creating your own objects
+  classes are used to create your own objects
+  know the distinction between the class and an instance of it
+    lists are a class, a specific list is an instance
+  creating a class
+    define the name for reference
+    define the attributes
+  using a class
+    create new instances of the class
+    perform operations on the instance
+  Why classes?
+    bundle data into packages along with procedures
+      work on these bundles through well defined interfaces
+    divide and conquer development
+      implement and test behavior separately
+      increased modularity = reduced complexity
+    Easier to reuse code
+Classes
+  class keyword defines a new type
+    class name(argument(parent class/object)):
+      attributes
+    the attribute 'object' means the class is a python object and will inherit all attributes of object
+    name is subclass of object
+    object is superclass of coordinate
+  attributes
+    data and procedures that belong to the class
+    data attributes are other objects that make up the class
+      numbers
+    procedural attributes
+      methods or functions that work only with that class
+  creating an instance of an object
+    use method __init__ to initialize some data attributes
+    first argument refers to an instance of the class
+    need to bind values passed in to the instance of the class
+      def __init__(self,argument(s))
+        self.attribute=argumentPassedIn
+  printing a class
+    use __str__ method to define what prints
+    return (formatted output)
+  use isinstance (object, class) to determine if an object is an instance of a class
+  See lecture for special operators
+    redefine what different operations look like for a specific class
+    addition, subtraction, equality, length, print
     
